@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Post Name</title>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="{%static 'default.css'%}">
+
+
+	<style type="text/css">
+		.img-container{
+			max-width: 600px;
+		}
+
+		img{
+			width: 100%
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="nav-wrapper">
+
+		<!-- Link around dots-wrapper added after tutorial video -->
+		<a href="/index">
+			<div class="dots-wrapper">
+				<div id="dot-1" class="browser-dot"></div>
+				<div id="dot-2" class="browser-dot"></div>
+				<div id="dot-3" class="browser-dot"></div>
+			</div>
+		</a>
+
+		<ul id="navigation">
+			<li><a href="/index#contact">Contact</a></li>
+
+		</ul>
+	</div>
+
+	<div class="main-container">
+		<br>
+
+		<div class="img-container">
+			<img src="{%static 'resume_pic.png'%}">
+		</div>
+		
+		<h3>Laboratory Management System</h3>
+
+		<p>This was a project I started worked on in March 2020 during the internship id did at Verzeo. I was part of a team 
+			composed of students from various domains of knowledge. I was part of the Artificial Intelligence team.
+		<br>
+		<br>
+		I contributed in writing the AI code and helped in creating a machine learning model.
+		<br>
+		<br>
+		The project was a website which accepts a resume in the form of a pdf and and displays a summarized resume as an output.  
+		<br>
+		</p>
+
+		<h5>Technologies:</h5>
+		<ul>
+			<li>- Python</li>
+			<li>- Django</li>
+			<li>- Flask</li>
+			<li>- AI</li>
+			<li>- Heroku</li>
+			<li>- NLP</li>
+			<li>- Web Scraping</li>
+			<li>- ML</li>
+		</ul>
+
+
+		<h5>Laboratory Admin Dashboard</h5>
+		<div class="img-container">
+			<img src="{%static 'lab-dash.jpg'%}">
+		</div>
+
+		<h6>Sample ID Form</h5>
+		<div class="img-container">
+			<img src="images/sample-form.jpg">
+		</div>
+
+		<h5>Results Input Fields</h5>
+		<div class="img-container">
+			<img src="images/results.jpg">
+		</div>
+
+		<h5>PDF Report (Automaticly Generated)</h5>
+		<div class="img-container">
+			<img src="images/pdf-report.jpg">
+		</div>
+
+		<h5>Customer Dashboard</h5>
+		<div class="img-container">
+			<img src="images/customer-dash.jpg">
+		</div>
+
+	</div>
+
+</body>
+</html>
