@@ -12,5 +12,9 @@ def index(request):
             form.save()
     context = {'form':form}
     return render(request,'index.html',context)
+
 def post(request):
     return render(request,'post.html')
+
+def chat(request):
+    return render(request,'chatForum.html')
