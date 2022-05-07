@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import ContactForm
 # Create your views here.
 from django.http import HttpResponse
+from .models import Contact
 
 
 def index(request):
@@ -18,3 +19,9 @@ def post(request):
 
 def chat(request):
     return render(request,'chatForum.html')
+def completed(request):
+    data=Contact.objects.all()
+    context={
+        'data': data
+    }
+    return render(request,'completed.html',context)

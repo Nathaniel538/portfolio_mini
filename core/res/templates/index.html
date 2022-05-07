@@ -199,7 +199,7 @@
 			<a href=""></a>
 			<h3 style="text-align: center;">Get In Touch</h3>
 
-			<form id="contact-form" action="" method="post">
+			<form id="contact-form" action="/completed" method="post">
 				<a name="contact" href="/completed"></a>
 				{% csrf_token %}
 				
@@ -216,7 +216,7 @@
 				<label>Message</label>
 				<textarea class="input-field" name="message"></textarea>
 
-				<input id="submit-btn" type="submit" value="Send">
+				<input id="submit-btn" type="submit" value="Send" onclick="completed.html">
 			</form>
 		</div>
 	</section> 

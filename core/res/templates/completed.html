@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    Thanks for connecting
+    Interact with people who have connected with me
+    <table class="table is-hoverable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        {% for i in data %}
+        <tr>
+            <td>{{ i.first_name}}</td>
+            <td>{{ i.email}}</td>
+        </tr>
+        {% endfor %}
+    
+</body>
+</html>
