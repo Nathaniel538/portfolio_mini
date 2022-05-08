@@ -25,3 +25,5 @@ def completed(request):
         'data': data
     }
     return render(request,'completed.html',context)
+def right(request):
+    return render(request,'right.html')

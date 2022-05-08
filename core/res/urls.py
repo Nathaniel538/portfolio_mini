@@ -8,4 +8,5 @@ urlpatterns = [
     path('post',views.post, name='post'),
     path('chat', views.chat, name='chat'),
     path('completed',views.completed, name='completed'),
+    path('right', views.right, name='right'),
 ]
