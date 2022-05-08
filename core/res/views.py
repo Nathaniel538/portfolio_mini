@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from .forms import ContactForm
 # Create your views here.
-from django.http import HttpResponse
 from .models import Contact
+from django.http import HttpResponse
 
 
 def index(request):
@@ -21,9 +21,9 @@ def chat(request):
     return render(request,'chatForum.html')
 def completed(request):
     data=Contact.objects.all()
-    context={
+    context2={
         'data': data
     }
-    return render(request,'completed.html',context)
+    return render(request,'completed.html',context2)
 def right(request):
     return render(request,'right.html')
