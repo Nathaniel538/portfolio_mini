@@ -201,16 +201,15 @@
 			<a href=""></a>
 			<h3 style="text-align: center;">Get In Touch</h3>
 
-			<form id="contact-form" action="/completed" method="post">
-				<a name="contact" href="/completed"></a>
+			<form id="contact-form" method="post">
 				{% csrf_token %}
 				
 				{% for field in form %}
-					{% if field.errors %}
-				    	<div class="alert alert-danger" role="alert">
-        	        	    {{ field.errors|escape }}
-        	        	</div>
-					{% endif %}
+					{% for error in field.errors %}
+						<div class="alert alert-danger" role="alert">
+							{{ error|escape }}
+						</div>
+					{% endfor %}
 				    <label> 
 				        {{ field.label }}
 				    </label>
@@ -219,7 +218,7 @@
 				    </div>
 				{% endfor %}
 
-				<input id="submit-btn" type="submit" value="Send" onclick="completed.html">
+				<input id="submit-btn" type="submit" value="Send">
 			</form>
 		</div>
 	</section> 
