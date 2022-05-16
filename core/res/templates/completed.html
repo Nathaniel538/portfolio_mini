@@ -6,22 +6,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
-<body>
-    Thanks for connecting
-    Interact with people who have connected with me
-    <table class="table is-hoverable">
-        <thead>
+<body style="background-image: linear-gradient(to bottom right, rgb(187, 187, 187), rgb(188, 211, 255));">
+    <section class="hero is-link is-offset-3">
+      <div class="hero-body">
+        <p class="title">
+          Thanks for connecting
+        </p>
+        <p class="subtitle">
+          Interact with people who have connected with me
+        </p>
+      </div>
+    </section>
+
+    <div class="column is-6 is-offset-3 mt-6">
+      <div class="box has-text-centered has-background-link-light">
+        <table class="table is-hoverable is-fullwidth is-size-4 has-background-link-light">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          {% for i in data %}
           <tr>
-            <th>Name</th>
-            <th>Email</th>
+              <th>{{ i.first_name}}</th>
+              <td>{{ i.email}}</td>
           </tr>
-        </thead>
-        {% for i in data %}
-        <tr>
-            <td>{{ i.first_name}}</td>
-            <td>{{ i.email}}</td>
-        </tr>
-        {% endfor %}
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+    
+    
     
 </body>
 </html>
