@@ -15,15 +15,17 @@ def index(request):
     return render(request,'index.html',{'form':form})
 
 def post(request):
-    return render(request,'post.html')
+    return render(request,'resume_screener.html')
 
 def chat(request):
     return render(request,'chatForum.html')
+
 def completed(request):
     data=Contact.objects.all()
     context2={
         'data': data
     }
     return render(request,'completed.html',context2)
+
 def right(request):
-    return render(request,'right.html')
+    return render(request,'website_design.html')
