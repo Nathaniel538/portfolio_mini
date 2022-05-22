@@ -1,0 +1,5 @@
+branch-defaults:
+  main:
+    environment: djange-e
+global:
+  profile: eb-cli
