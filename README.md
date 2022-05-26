@@ -1,2 +1,2 @@
 # portfolio_mini
-ui to be updated form gets stored in a db
+A portfolio website built using django HTML, CSS and Javascript.
