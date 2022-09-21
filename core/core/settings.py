@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-t&7r2dgtgy-523dbquad!5u$l)0ea5*99v)^ds^(o%6zajws6m
 DEBUG = True
 
 ALLOWED_HOSTS = ['djange-e.eba-mg5262as.us-west-2.elasticbeanstalk.com']
-
+ALLOWED_HOSTS = ['djaport.herokuapp.com']
 
 # Application definition
 
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -125,3 +126,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = 'static/'
 STATIC_ROOT = 'static'
+STATIC_ROOT=os.path.join(BASE_DIR, 'static')
+# Configure Django App for Heroku.
+import django_on_heroku
+django_on_heroku.settings(locals())
